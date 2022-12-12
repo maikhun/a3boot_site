@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'EuropeExt';
+    src: url("../fonts/EuropeExtNormal.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    padding: 20px 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img {
+    vertical-align: bottom;
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+.menu-item {
+    margin-right: 5%;
+}
+.menu-item a {
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+}
+.menu-item a:hover {
+    border-bottom: 2px solid #905E47;
+    color:#905E47;
+}
+
+
+
+.main, .jobs, .cases {
+    height: 100vh;
+}
+.main {
+    background-color: #905E47;
+    padding: 20% 0 20% 0;
+}
+.main-title {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 110%;
+    margin-bottom: 1%;
+}
+.main-text {
+    font-size: 16px;
+    line-height: 130%;
+    color: whitesmoke;
+    margin-bottom: 40px;    
+}
+.main .main-text {
+    text-align: center;
+}
+.main-action {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 20px;
+    width: 334px;
+    height: 64px;
+    background: whitesmoke;
+    color: #584136;
+    border: 0;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.02ex;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background-color .2s;
+    border-radius: 5px;
+}
+/* .main .button {
+    border: 2px solid #584136;
+} */
+.button:hover {
+    cursor: pointer;
+    background-color: #584136;
+    color:whitesmoke;
+}
+
+
+
+.cases, .jobs, .response {
+    padding: 5% 0 20% 0;
+}
+.cases {
+    background-color: whitesmoke;
+}
+.cases .main-text {
+    color:black;
+}
+.card-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card-columns .card {
+    margin: 1em auto;
+    max-width: 25%;
+    max-height: 20%;
+    border: 2px solid #584136;
+}
+.card .card-img-top {
+    width: 100%;
+    height: 70%;
+    object-fit: contain;
+}
+.cards-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.card-body {
+    border-top: 2px solid #584136;
+}
+
+
+
+.jobs {
+    background-color: #905E47;
+    color: whitesmoke;
+}
+.sub-title {
+    font-size: 35px;
+}
+/* .jobs-list {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 75%);
+    direction: ltr;
+}
+.job {
+    padding: 2.5% 1.5%;
+    width: 90%;
+    height: 100%;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    color:black;
+    border: 2px solid #584136;
+    border-radius: 5px;
+    margin: 1em auto;
+    box-shadow: 12px 12px #584136, 12px 12px #584136;
+} */
+.job .title {
+    font-size: 30px;
+}
+/* .job-title {
+    font-size: 20px;
+}
+.skill, .salary, .job-place {
+    margin-top: 2%;
+}
+.descript {
+    font-size: 16px;
+    color:#404044;
+} */
+.notjob {
+    margin: 5% 0 5% 0;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+.form-group {
+    border-radius: 5px;
+    padding: 1.5%;
+    font-size: 25px;
+    background-color: whitesmoke;
+    margin: 5% 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%; 
+    border: 2px solid #584136;
+    box-shadow: 12px 12px #584136, 12px 12px #584136;
+}
+.form-group label {
+    color:#030305;
+}
+.form-control {
+    border: 2px solid #584136;
+    margin: 1% 0;
+}
+.form-control:invalid {
+    border: 2px solid red;
+}
+.form-group small {
+    text-align: center;
+    font-size: 18px;
+    color:black;
+    margin-bottom: 1%;
+}
+.sendData {
+    border: 1px solid #584136;
+    width: 30%;
+    padding: 1.5%;
+    font-size: 20px;
+    border-radius: 5px;
+    color:whitesmoke;
+    background-color: #584136;
+    border: 1px solid #584136;
+}
+.jobs button:hover {
+    background-color: #584136;
+    border: 1px solid #584136;
+}
+.jobs button:active{
+    background-color: #030305;
+    transition: color 0.5s;
+}
+
+
+
+.info {
+    background-color: whitesmoke;
+    padding: 2.2% 0 2.5% 0;
+    border-top: 1px solid black;
+}
+.info .container {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.info .sub-title {
+    font-size: 20px;
+}
+
+
+
+.social-items ul, .address-items ul, .phone-items ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.info li {
+    position: relative;
+}
+.social-items li, .phone-items li {
+    right: 30%;
+}
+.address-items li {
+    right: 20%;
+}
+.info-title {
+    font-size: 25px;
+}
+.social-item a {
+    color: black;
+    text-decoration: none;
+}
+.social-item a:hover {
+    border-bottom: 2px solid black;
+    color: black;
+}
+.address-items .sub-title {
+    display: flex;
+    align-items: flex-start;
+}
+.phone-item a {
+    text-decoration: none;
+    color: black;
+}
+.phone-item a:hover {
+    color:black;
+}
+
+
+
+.footer {
+    background-color: whitesmoke;
+    border-top: 1px solid black;
+    padding: 25px 0;
+}
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rights {
+    font-size: 15px;
+    text-align: right;
+    color: #030305;
+}
+
+
+
+.header, .main, .cases, .jobs, .info, .footer {
+    font-family: 'EuropeExt', sans-serif;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A3boot | Разработка программного обеспечения</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+    crossorigin="anonymous">
+    
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="images/" alt="Logo">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li class="menu-item main-menu-item">
+                    <a href="#main">Главная</a>
+                </li>
+                <li class="menu-item cases-menu-item">
+                    <a href="#cases">Кейсы</a>
+                </li>
+                <li class="menu-item jobs-menu-item">
+                    <a href="#jobs">Вакансии</a>
+                </li>
+                <li class="menu-item info-menu-item">
+                    <a href="#info">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section class="main" id="main">
+    <div class="container">
+        <h1 class="main-title">AT3boot</h1>
+        <div class="main-info">
+            <div class="main-text">
+                Описание работы нашей компании
+            </div>
+            <div class="main-action">
+                <button class="button" id="main-action-first">Вакансии</button>
+                <button class="button" id="main-action-second">О компании</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cases" id="cases">
+    <div class="container">
+        <h1 class="sub-title">Кейсы</h1>
+        <div class="main-text">
+            Проекты нашей компании
+        </div>
+        <div class="card-columns">
+            <div class="card">
+                <img class="card-img-top" src="https://img.freepik.com/premium-photo/psychological-support-people-are-standing-in-circle-and-hugging_141192-2255.jpg" alt="Proj 1">
+                <div class="card-body">
+                    <h4 class="cards-title">Поддержка системы T-FLEX</h4>
+                    <p class="card-text">Text</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://www.ufatime.ru/media/ft/e5/73/e573110e-7e97-463e-a4e1-96a97c91ae34/poliklinika-251122.jpg__1290x895_q85_crop_subsampling-2.jpg" alt="Proj 2">
+                <div class="card-body">
+                    <h4 class="cards-title">Разработка веб-сайта</h4>
+                    <p class="card-text">Text</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="jobs" id="jobs">
+    <div class="container">
+        <h2 class="sub-title">
+            Вакансии
+        </h2>
+        <div class="main-text">
+            Список вакантных должностей
+        </div>
+        <!-- <div class="jobs-list">
+            <div class="job">
+                <h1 class="title">Разработчик программного обеспечения</h1>
+                <div class="salary">
+                    <h2 class="job-title">Зарплата</h2>
+                    <p class="descript">От 90.000 ₽</p>
+                </div>
+                <div class="skill">
+                    <h2 class="job-title">Рассматриваемый стек технологий</h2>
+                    <p class="descript">что-то связанное с языками программирования, опыт интеграции приложения и ПО.</p>
+                </div>
+                <div class="job-place">
+                    <h2 class="job-title">Место работы и занятость</h2>
+                    <p class="descript">Remote • Full-time</p>
+                </div>
+            </div>
+            <div class="job job2">
+                <h1 class="title">Разработчик веб-сервисов</h1>
+                <div class="salary">
+                    <h2 class="job-title">Зарплата</h2>
+                    <p class="descript">От 75.000 ₽</p>
+                </div>
+                <div class="skill">
+                    <h2 class="job-title">Рассматриваемый стек технологий</h2>
+                    <p class="descript">что-то связанное с языками программирования, разметкой и стилями, также использование каких-либо фреймворков</p>
+                </div>
+                <div class="job-place">
+                    <h2 class="job-title">Место работы и занятость</h2>
+                    <p class="descript">Remote • Full-time</p>
+                </div>
+            </div>
+        </div> -->
+        <label class="notjob">К сожалению, мы не ищем специалистов :(</label>
+        <div class="form-group">
+          <label for="">Контактные данные</label>
+          <input type="text" class="form-control" name="fio" id="fio" placeholder="Введите ФИО">
+          <input type="email" class="form-control" name="email" id="mail" aria-describedby="emailHelpId" placeholder="Введите e-mail">
+          <small id="emailHelpId" class="form-text">Мы пришлем письмо, если нам потребуются специалисты</small>
+          <button type="submit" id="btn" class="sendData">Отправить данные</button>
+        </div>
+    </div>
+</section>
+<section class="info" id="info">
+    <div class="container">
+        <h2 class="info-title">Контактная информация</h2>
+        <div class="social-items">
+            <h2 class="sub-title">Соц сети</h2>
+            <ul>
+                <li class="social-item">
+                    <a href="https://vk.com" target="_blank">ВКонтакте</a>
+                </li>
+                <li class="social-item">
+                    <a href="https://web.telegram.org" target="_blank">Telegram</a>
+                </li>
+                <li class="social-item">
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                </li>
+            </ul>
+        </div>
+        <div class="address-items">
+            <h2 class="sub-title">Адрес</h2>
+            <ul>
+                <li class="address-item">
+                    Рязань
+                </li>
+                <li class="address-item">
+                    Высоковольтная
+                </li>
+                <li class="address-item">
+                    50А
+                </li>
+            </ul>
+        </div>
+        <div class="phone-items">
+            <h2 class="sub-title">Звонить</h2>
+            <ul>
+                <li class="phone-item">
+                    <a href="tel:+79209624296">8 920 962 42 96</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="rights"> ® 2022 - AT3boot</div>
+    </div>
+</footer>
+<script src="scripts/script.js"></script>
+</body>
+</html>
