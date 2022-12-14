@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: 'EuropeExt';
-    src: url("../fonts/EuropeExtNormal.ttf");
+    src: url("../fonts/vag_world_bold.ttf");
     font-weight: normal;
     font-style: normal;
 }
@@ -20,26 +20,40 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .logo img {
     vertical-align: bottom;
+    margin-right: 15%;
 }
 .menu ul {
     list-style: none;
     display: flex;
+    justify-content: flex-end;
+    width: 200%;
 }
 .menu-item {
-    margin-right: 5%;
+    width: 40%;
+    margin-right: 15%;
 }
 .menu-item a {
-    font-size: 17px;
-    color: black;
+    width: fit-content;
+    background-color: black;
+    padding: 3% 3%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
     text-decoration: none;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 .menu-item a:hover {
-    border-bottom: 2px solid #905E47;
-    color:#905E47;
+    border-radius: 50px;
+    background-color: black;
+    border: 2px solid black;
+    color:white;
+    box-shadow: black inset;
 }
 
 
@@ -48,12 +62,12 @@
     height: 100vh;
 }
 .main {
-    background-color: #905E47;
+    background-color: black;
     padding: 20% 0 20% 0;
 }
 .main-title {
     text-align: center;
-    color: whitesmoke;
+    color: white;
     font-size: 80px;
     font-weight: bold;
     line-height: 110%;
@@ -62,7 +76,7 @@
 .main-text {
     font-size: 16px;
     line-height: 130%;
-    color: whitesmoke;
+    color: white;
     margin-bottom: 40px;    
 }
 .main .main-text {
@@ -79,7 +93,7 @@
     width: 334px;
     height: 64px;
     background: whitesmoke;
-    color: #584136;
+    color: black;
     border: 0;
     font-weight: bold;
     font-size: 16px;
@@ -89,14 +103,16 @@
     text-align: center;
     transition: background-color .2s;
     border-radius: 5px;
+    
 }
 /* .main .button {
     border: 2px solid #584136;
 } */
 .button:hover {
     cursor: pointer;
-    background-color: #584136;
+    background-color: black;
     color:whitesmoke;
+    border: 1px solid white;
 }
 
 
@@ -105,10 +121,12 @@
     padding: 5% 0 20% 0;
 }
 .cases {
-    background-color: whitesmoke;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(255,255,255,1) 100%);
+    overflow: hidden;
 }
 .cases .main-text {
-    color:black;
+    color:white;
 }
 .card-columns {
     display: flex;
@@ -137,8 +155,8 @@
 
 
 .jobs {
-    background-color: #905E47;
-    color: whitesmoke;
+    background-color: white;
+    color: black;
 }
 .sub-title {
     font-size: 35px;
@@ -194,14 +212,14 @@
     align-items: center;
     flex-direction: column;
     width: 50%; 
-    border: 2px solid #584136;
-    box-shadow: 12px 12px #584136, 12px 12px #584136;
+    border: 2px solid black;
+    box-shadow: 12px 12px black, 12px 12px black;
 }
 .form-group label {
-    color:#030305;
+    color:black;
 }
 .form-control {
-    border: 2px solid #584136;
+    border: 2px solid black;
     margin: 1% 0;
 }
 .form-control:invalid {
@@ -214,18 +232,18 @@
     margin-bottom: 1%;
 }
 .sendData {
-    border: 1px solid #584136;
+    border: 1px solid black;
     width: 30%;
     padding: 1.5%;
     font-size: 20px;
     border-radius: 5px;
     color:whitesmoke;
-    background-color: #584136;
-    border: 1px solid #584136;
+    background-color: black;
+    border: 1px solid black;
 }
 .jobs button:hover {
-    background-color: #584136;
-    border: 1px solid #584136;
+    background-color: white;
+    border: 1px solid white;
 }
 .jobs button:active{
     background-color: #030305;
@@ -235,22 +253,26 @@
 
 
 .info {
-    background-color: whitesmoke;
+    background-color: white;
     padding: 2.2% 0 2.5% 0;
     border-top: 1px solid black;
 }
 .info .container {
-    max-width: 100%;
+    max-width: 90%;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 .info .sub-title {
     font-size: 20px;
 }
+.contacts-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
-
-
-.social-items ul, .address-items ul, .phone-items ul {
+.social-items ul, .address-items ul, .fio ul, .phone ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -275,22 +297,30 @@
     border-bottom: 2px solid black;
     color: black;
 }
-.address-items .sub-title {
+/* .address-items .sub-title {
     display: flex;
     align-items: flex-start;
+} */
+/* .contact-face-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.phone-item a {
+.contact-face-div .owner {
+    font-size: 18px;
+}
+.contact-face-div a {
     text-decoration: none;
     color: black;
 }
-.phone-item a:hover {
+.contact-face-div a:hover {
     color:black;
-}
+} */
 
 
 
 .footer {
-    background-color: whitesmoke;
+    background-color: white;
     border-top: 1px solid black;
     padding: 25px 0;
 }
