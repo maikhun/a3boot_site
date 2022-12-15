@@ -8,7 +8,14 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@keyframes typing {
+    from { width: 0% }
+    to { width: 75% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white } 
+} 
 .header {
     padding: 20px 0;
 }
@@ -63,40 +70,72 @@
 }
 .main {
     background-color: black;
-    padding: 20% 0 20% 0;
-}
-.main-title {
-    text-align: center;
     color: white;
-    font-size: 80px;
-    font-weight: bold;
-    line-height: 110%;
-    margin-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .container {
+    display: flex;
+    flex-direction: row;
+}
+
+.first-part, .second-part {
+    padding: 20% 0;
+    width: 50%;
+    max-width: 50%;
+}
+.second-part {
+    padding: 25% 0 ;
+}
+
+.main-title {
+    white-space: nowrap;
+    border-right: .10em solid white;
+    color: white;
+    letter-spacing: .17em;
+    margin-bottom: 2%;
+    animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
 .main-text {
-    font-size: 16px;
-    line-height: 130%;
-    color: white;
-    margin-bottom: 40px;    
+    font-size: 20px;
+    line-height: 110%;
+    color: white;    
 }
 .main .main-text {
+    width: 75%;
     text-align: center;
+    line-height: 120%;
+    margin-bottom: 3%;
+}
+.second-part ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    list-style:circle;
+    line-height: 120%;
+    width: 100%;
+}
+.second-part ul li {
+    margin-bottom: 10%;
 }
 .main-action {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
 .button {
-    padding: 20px;
-    width: 334px;
-    height: 64px;
+    padding: 15px;
+    width: 75%;
+    height: 2.5%;
     background: whitesmoke;
     color: black;
     border: 0;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 0.02ex;
     text-transform: uppercase;
     box-sizing: border-box;
@@ -111,7 +150,7 @@
 .button:hover {
     cursor: pointer;
     background-color: black;
-    color:whitesmoke;
+    color:white;
     border: 1px solid white;
 }
 
@@ -121,12 +160,11 @@
     padding: 5% 0 20% 0;
 }
 .cases {
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 35%, rgba(255,255,255,1) 100%);
+    background: rgb(255, 255, 255);
     overflow: hidden;
 }
-.cases .main-text {
-    color:white;
+.cases .main-text, .cases .sub-title {
+    color:black;
 }
 .card-columns {
     display: flex;
@@ -134,27 +172,33 @@
     flex-wrap: wrap;
 }
 .card-columns .card {
+    display: flex;
+    flex-direction: row;
     margin: 1em auto;
-    max-width: 25%;
-    max-height: 20%;
-    border: 2px solid #584136;
+    max-width: 30%;
+    max-height: 50%;
+    border: 3px solid black;
 }
-.card .card-img-top {
-    width: 100%;
-    height: 70%;
+.card .card-image {
+    padding: 5%;
+    width: 50%;
+    max-width: 50%;
+    height: 100%;
     object-fit: contain;
+    border-left: 3px solid black;
 }
 .cards-title {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
+    border-bottom: 2px solid black;
 }
-.card-body {
-    border-top: 2px solid #584136;
-}
+
 
 
 
 .jobs {
+    border-top: 1px solid black;
+    overflow: hidden;
     background-color: white;
     color: black;
 }
@@ -206,20 +250,20 @@
     border-radius: 5px;
     padding: 1.5%;
     font-size: 25px;
-    background-color: whitesmoke;
+    background-color: black;
     margin: 5% 25%;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 50%; 
-    border: 2px solid black;
+    border: 2px solid white;
     box-shadow: 12px 12px black, 12px 12px black;
 }
 .form-group label {
-    color:black;
+    color:white;
 }
 .form-control {
-    border: 2px solid black;
+    border: 2px solid white;
     margin: 1% 0;
 }
 .form-control:invalid {
@@ -228,26 +272,22 @@
 .form-group small {
     text-align: center;
     font-size: 18px;
-    color:black;
-    margin-bottom: 1%;
+    color:white;
+    margin-bottom: 3%;
 }
 .sendData {
-    border: 1px solid black;
+    border: 1px solid white;
     width: 30%;
     padding: 1.5%;
     font-size: 20px;
-    border-radius: 5px;
-    color:whitesmoke;
-    background-color: black;
-    border: 1px solid black;
-}
-.jobs button:hover {
+    border-radius: 25px;
+    color:black;
     background-color: white;
     border: 1px solid white;
 }
 .jobs button:active{
     background-color: #030305;
-    transition: color 0.5s;
+    color:white;
 }
 
 
