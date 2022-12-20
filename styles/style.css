@@ -18,9 +18,10 @@
 .header {
     position: fixed;
     width: 100%;
-    background-color: rgb(43, 40, 40);
+    background-color: rgba(43, 40, 40, 0.4);
     padding: 0.5% 0 0.2% 0;
     z-index: 100;
+    
 }
 .container {
     max-width: 1200px;
@@ -51,7 +52,7 @@
     font-family: 'PobedaBold', sans-serif;
     text-align: center;
     vertical-align: middle;
-    font-size: 25px;
+    font-size: 200%;
     color: white;
     text-decoration: none;
 }
@@ -66,8 +67,8 @@
     height: 100vh;
 }
 .main {
-    background-image: url("../images/background.jpg");
-    object-fit: contain;
+    background-image: url("https://lookw.ru/10/1049/1567130394-46-3.jpg");
+    object-fit: cover;
     color: black;
 }
 
@@ -80,21 +81,22 @@
 
 .main-title {
     font-family: 'PobedaBold', sans-serif;
-    font-size: 50px;
+    font-size: 75px;
+    margin: 0 auto;
     color:whitesmoke;
-    background-color: rgb(43, 40, 40);
+    background-color: rgba(43, 40, 40, 0.4);
 }
 .main-text {
     font-family: 'PobedaBold', sans-serif;
     color: black;
-    font-size: 30px;
+    font-size: 45px;
     line-height: 110%;    
 }
-.main .main-text {
+/* .main .main-text {
     font-size: 30px;
     width: 100%;
     line-height: 120%;
-}
+} */
 
 /* .button {
     padding: 15px;
@@ -137,14 +139,15 @@
 }
 .carousel-item .carousel-text {
     font-family: 'PobedaBold', sans-serif;
-    font-size: 35px;
-    background-color: #030305;
+    font-size: 45px;
+    width: 100%;
+    background-color: black;
 } 
 
 
 .experience {
     background: rgb(43, 40, 40);
-    font-size: 25px;
+    font-size: 35px;
     overflow: hidden;
 }
 .experience a {
@@ -170,7 +173,7 @@
 }
 .card img {
     width: 50%;
-    height: 50%;
+    height: 25%;
 }
 .card img {
     padding: 1%;
