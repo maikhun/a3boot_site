@@ -36,18 +36,16 @@
 }
 .logo img {
     vertical-align: middle;
-    margin-right: 15%;
+    margin-right: 10%;
 }
 .menu ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    height: 100%;
+
+    justify-content: center;
 }
 .menu-item {
-    width: 100%;
-    margin-right: 15%;
+    margin-right: 10%;
 }
 .menu-item a {
     font-family: 'PobedaBold', sans-serif;
@@ -58,7 +56,7 @@
     text-decoration: none;
 }
 .menu-item a:hover {
-    border-bottom: 2px solid black;
+    border-bottom: 3px solid black;
     color:black;
 }
 
@@ -83,10 +81,12 @@
 .main-title {
     font-family: 'PobedaBold', sans-serif;
     font-size: 50px;
-    margin-bottom: 2%;
+    color:whitesmoke;
+    background-color: rgb(43, 40, 40);
 }
 .main-text {
     font-family: 'PobedaBold', sans-serif;
+    color: black;
     font-size: 30px;
     line-height: 110%;    
 }
@@ -94,7 +94,6 @@
     font-size: 30px;
     width: 100%;
     line-height: 120%;
-    margin-bottom: 3%;
 }
 
 /* .button {
@@ -148,43 +147,38 @@
     font-size: 25px;
     overflow: hidden;
 }
+.experience a {
+    cursor: pointer;
+    text-decoration: none;
+}
 .experience .cards {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-
 }
 .cards .card {
     font-family: 'PobedaBold', sans-serif;
     background-color: #8a8a8a;
-    padding: 1% 1%;
-    width: 20%;
-    margin: 2% 2%;
-    max-width: 20%;
-    max-height: 20%;
-    height: 20%;
-    border-radius: 20px;
+    padding: 1%;
+    margin: 3%;
+    border-radius: 10px;
     color:black;
     align-items: center;
 }
 .card .card-text {
     text-align: center;
-    padding: 2.5%;
+    padding: 5%;
 }
 .card img {
-    width: 40%;
-    height: 40%;
-    border-radius: 50px;
-    border: 2px solid black;
+    width: 50%;
+    height: 50%;
 }
 .card img {
-    padding: 4%;
+    padding: 1%;
 }
 
 .cases, .jobs, .response, .experience, .info {
     overflow: hidden;
-    padding: 5% 0 5% 0;
+    padding: 5% 0;
 }
 .cases {
     color:#030305;
@@ -355,9 +349,10 @@
     justify-content: space-between;
 }
 .list {
+    letter-spacing: 2px;
     padding: 0;
     list-style: none;
-    font-size: 20px;
+    font-size: 25px;
 
 }
 .social-item a{
@@ -378,14 +373,12 @@
 }
 .footer .container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .rights {
     font-family: 'PobedaBold', sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
-    text-align: right;
     color: white;
 }
 
