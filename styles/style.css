@@ -1,391 +1,440 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-@font-face {
-    font-family: 'PobedaBold';
-    src: url("../fonts/pobeda_bold.ttf");
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'PobedaReg';
-    src: url("../fonts/pobeda_regular.ttf");
-    font-weight: normal;
-    font-style: normal;
-}
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    @font-face {
+        font-family: 'PobedaBold';
+        src: url("../fonts/pobeda_bold.ttf");
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'PobedaReg';
+        src: url("../fonts/pobeda_regular.ttf");
+        font-weight: normal;
+        font-style: normal;
+    }
 
-.header {
-    position: fixed;
-    width: 100%;
-    background-color: rgba(43, 40, 40, 0.4);
-    padding: 0.5% 0 0.2% 0;
-    z-index: 100;
+    .header {
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        padding: 0.5% 0 0.2% 0;
+        z-index: 100;
+        
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .header .container {
+        margin-top: 0.2%;
+        height: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo img {
+        vertical-align: middle;
+        margin-right: 10%;
+    }
+    .menu ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    .menu-item {
+        margin-right: 10%;
+    }
+    .menu-item a {
+        font-family: 'PobedaBold', sans-serif;
+        text-align: center;
+        font-size: 170%;
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    .menu-item a:hover {
+        border-bottom: 3px solid black;
+        color:white;
+    }
+
+
+
+    .main, .jobs, .cases {
+        height: 100vh;
+    }
+    .main {
+        background-image: url("../images/background.jpg");
+        object-fit: contain;
+        color: black;
+        overflow: hidden;
+    }
+
+    .main .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10%;
+    }
+
+    .main-title {
+        font-family: 'PobedaBold', sans-serif;
+        font-size: 75px;
+        margin: 0 auto;
+        color:whitesmoke;
+        background-color: rgba(43, 40, 40, 0.4);
+    }
+    .main-text {
+        font-family: 'PobedaBold', sans-serif;
+        color: black;
+        font-size: 45px;
+        line-height: 110%;    
+    }
+    /* .main .main-text {
+        font-size: 30px;
+        width: 100%;
+        line-height: 120%;
+    } */
+
+    /* .button {
+        padding: 15px;
+        width: 75%;
+        height: 2.5%;
+        background: whitesmoke;
+        color: black;
+        border: 0;
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 0.02ex;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        text-align: center;
+        transition: background-color .2s;
+        border-radius: 5px;
+        
+    }
+    /* .main .button {
+        border: 2px solid #584136;
+    } */
+    /* .button:hover {
+        cursor: pointer;
+        background-color: black;
+        color:whitesmoke;
+        border: 1px solid whitesmoke;
+    } */ 
+
+
+    .main .testing {
+        width: 100%;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 50vh;
+        object-fit: contain;
+    }
+    .carousel-item .carousel-text {
+        font-family: 'PobedaBold', sans-serif;
+        font-size: 45px;
+        width: 100%;
+    } 
+    .carousel-control-prev, .carousel-control-next {
+        background-color: rgba(43, 40, 40, 0.2);
+        border-radius: 360px;
+        margin: 15%;
+        width: 20%;
+        height: 20%;
+    }
+
+
+    .experience {
+        background: rgb(43, 40, 40);
+        font-size: 35px;
+        overflow: hidden;
+        padding: 0% 0% 0% 25%;
+    }
+    .experience a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .experience .container .cards {
+        display: flex;
+    }
+    .cards a {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        margin-left: 3.5%;
+    }
+    .cards .card {
+        font-family: 'PobedaBold', sans-serif;
+        background-color: #8a8a8a;
+        padding: 1%;
+        width: 65%;
+        height: 95%;
+        margin-right: 15%;
     
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.header .container {
-    margin-top: 0.2%;
-    height: 100%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo img {
-    vertical-align: middle;
-    margin-right: 10%;
-}
-.menu ul {
-    list-style: none;
-    display: flex;
+        border-radius: 3px;
+        color:black;
+        align-items: center;
+    }
+    .card .card-text {
+        text-align: center;
+        padding: 3%;
+    }
+    .card img {
+        padding: 5%;
+        width: 50%;
+        height: 45%;
+    }
 
-    justify-content: center;
-}
-.menu-item {
-    margin-right: 10%;
-}
-.menu-item a {
-    font-family: 'PobedaBold', sans-serif;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 200%;
-    color: white;
-    text-decoration: none;
-}
-.menu-item a:hover {
-    border-bottom: 3px solid black;
-    color:black;
-}
-
-
-
-.main, .jobs, .cases {
-    height: 100vh;
-}
-.main {
-    background-image: url("https://lookw.ru/10/1049/1567130394-46-3.jpg");
-    object-fit: cover;
-    color: black;
-}
-
-.main .container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 10%;
-}
-
-.main-title {
-    font-family: 'PobedaBold', sans-serif;
-    font-size: 75px;
-    margin: 0 auto;
-    color:whitesmoke;
-    background-color: rgba(43, 40, 40, 0.4);
-}
-.main-text {
-    font-family: 'PobedaBold', sans-serif;
-    color: black;
-    font-size: 45px;
-    line-height: 110%;    
-}
-/* .main .main-text {
-    font-size: 30px;
-    width: 100%;
-    line-height: 120%;
-} */
-
-/* .button {
-    padding: 15px;
-    width: 75%;
-    height: 2.5%;
-    background: whitesmoke;
-    color: black;
-    border: 0;
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 0.02ex;
-    text-transform: uppercase;
-    box-sizing: border-box;
-    text-align: center;
-    transition: background-color .2s;
-    border-radius: 5px;
-    
-}
-/* .main .button {
-    border: 2px solid #584136;
-} */
-/* .button:hover {
-    cursor: pointer;
-    background-color: black;
-    color:white;
-    border: 1px solid white;
-} */ 
-
-
-.something {
-    overflow: hidden;
-    background-color: #70757b;
-    width: 100%;
-    height: 50vh;
-}
-.carousel-item img {
-    width: 100%;
-    height: 50vh;
-    object-fit: contain;
-}
-.carousel-item .carousel-text {
-    font-family: 'PobedaBold', sans-serif;
-    font-size: 45px;
-    width: 100%;
-    background-color: black;
-} 
-
-
-.experience {
-    background: rgb(43, 40, 40);
-    font-size: 35px;
-    overflow: hidden;
-}
-.experience a {
-    cursor: pointer;
-    text-decoration: none;
-}
-.experience .cards {
-    display: flex;
-    justify-content: center;
-}
-.cards .card {
-    font-family: 'PobedaBold', sans-serif;
-    background-color: #8a8a8a;
-    padding: 1%;
-    margin: 3%;
-    border-radius: 10px;
-    color:black;
-    align-items: center;
-}
-.card .card-text {
-    text-align: center;
-    padding: 5%;
-}
-.card img {
-    width: 50%;
-    height: 25%;
-}
-.card img {
-    padding: 1%;
-}
-
-.cases, .jobs, .response, .experience, .info {
-    overflow: hidden;
-    padding: 5% 0;
-}
-.cases {
-    color:#030305;
-    font-family: 'PobedaBold', sans-serif;
-    background: white;
-}
-.cases .main-text, .cases .sub-title {
-    font-family: 'PobedaBold', sans-serif;
-    color:black;
-}
-.card-columns {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-.card-columns .card-second {
-    display: flex;
-    flex-direction: row;
-    margin: 1% auto;
-    width: 90%;
-    max-width: 90%;
-    border: 3px solid black;
-    border-radius: 15px;
-    vertical-align: middle;
-    box-shadow: 12px 12px #70757b, 12px 12px #70757b;
-}
-.card-second img {
-    padding: 1%;
-    width: 25%;
-    height: 5%;
-    max-width: 25%;
-    max-height: 5%;
-    object-fit: cover;
-    border-left: 2px solid black;
-}
-.card-second .cards-title {
-    font-family: 'PobedaBold', sans-serif;
-    font-size:0px;
-    text-align: center;
-    border-bottom: 2px solid black;
-}
-.card-second .card-text {
-    padding: 1%;
-    font-family: 'PobedaBold', sans-serif;
-    font-size: 25px;
-}
+    .jobs, .response, .experience, .info, .cases {
+        overflow: hidden;
+        padding: 5% 0;
+    }
+    /* .cases {
+        color:#030305;
+        font-family: 'PobedaBold', sans-serif;
+        background: whitesmoke;
+    }
+    .cases .main-text, .cases .sub-title {
+        font-family: 'PobedaBold', sans-serif;
+        color:black;
+    }
+    .card-columns {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .card-columns .card-second {
+        display: flex;
+        flex-direction: row;
+        margin: 1% auto;
+        width: 90%;
+        max-width: 90%;
+        border: 3px solid black;
+        border-radius: 15px;
+        vertical-align: middle;
+        box-shadow: 12px 12px #70757b, 12px 12px #70757b;
+    }
+    .card-second img {
+        padding: 1%;
+        width: 25%;
+        height: 5%;
+        max-width: 25%;
+        max-height: 5%;
+        object-fit: cover;
+        border-left: 2px solid black;
+    }
+    .card-second .cards-title {
+        font-family: 'PobedaBold', sans-serif;
+        font-size:0px;
+        text-align: center;
+        border-bottom: 2px solid black;
+    }
+    .card-second .card-text {
+        padding: 1%;
+        font-family: 'PobedaBold', sans-serif;
+        font-size: 25px;
+    } */
 
 
 
-.jobs .sub-title {
-    font-family: 'PobedaBold', sans-serif;
-    font-size: 40px;
-}
-.jobs {
-    background-color: #70757b;
-    color: black;
-}
-/* .jobs-list {
-    width: 60%;
-    display: grid;
-    grid-template-columns: repeat(2, 75%);
-    direction: ltr;
-}
-.job {
-    padding: 2.5% 1.5%;
-    width: 90%;
-    height: 100%;
-    max-width: 90%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: whitesmoke;
-    color:black;
-    border: 2px solid #584136;
-    border-radius: 5px;
-    margin: 1em auto;
-    box-shadow: 12px 12px #584136, 12px 12px #584136;
-} */
-.job .title, .notjob {
-    font-size: 30px;
-    font-family: 'PobedaBold', sans-serif;
-}
-/* .job-title {
-    font-size: 20px;
-}
-.skill, .salary, .job-place {
-    margin-top: 2%;
-}
-.descript {
-    font-size: 16px;
-    color:#404044;
-} */
-.notjob {
-    margin: 10% auto 5% auto;
-    width: 100%;
-    text-align: center;
-    font-size: 40px;
-}
-.form-group {
-    font-family: 'PobedaBold', sans-serif;
-    border-radius: 30px;
-    padding: 2%;
-    
-    background-color: #28292b;
-    margin: 5% 25%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 50%; 
-    box-shadow: 12px 12px black, 12px 12px black;
-}
-.form-group label {
-    letter-spacing: 1.5px;
-    color:white;
-    font-size: 30px;
-    
-}
-.form-control{
-    border: 2px solid white;
-    margin: 1% 0;
-}
-.form-control:invalid {
-    border: 5px solid red;
-}
-.form-group small {
-    text-align: center;
-    font-size: 23px;
-    color:white;
-    letter-spacing: 2px;
-    margin-bottom: 1%;
-}
-.form-group input {
-    font-size: 20px;
-}
-.sendData {
-    border: 1px solid white;
-    width: 30%;
-    padding: 1.5%;
-    font-size: 25px;
-    letter-spacing: 1.5px;
-    border-radius: 25px;
-    color:black;
-    background-color: white;
-    border: 1px solid white;
-}
-.jobs button:active{
-    background-color: #28292b;
-    color:white;
-}
+    .jobs .sub-title, .cases .sub-title {
+        font-family: 'PobedaBold', sans-serif;
+        font-size: 40px;
+    }
+    .jobs {
+        background-color: rgba(43, 40, 40, 0.4);
+        color: black;
+    }
+    /* .jobs-list {
+        width: 60%;
+        display: grid;
+        grid-template-columns: repeat(2, 75%);
+        direction: ltr;
+    }
+    .job {
+        padding: 2.5% 1.5%;
+        width: 90%;
+        height: 100%;
+        max-width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: whitesmoke;
+        color:black;
+        border: 2px solid #584136;
+        border-radius: 5px;
+        margin: 1em auto;
+        box-shadow: 12px 12px #584136, 12px 12px #584136;
+    } */
+    .job .title, .notjob {
+        font-size: 30px;
+        font-family: 'PobedaBold', sans-serif;
+    }
+    /* .job-title {
+        font-size: 20px;
+    }
+    .skill, .salary, .job-place {
+        margin-top: 2%;
+    }
+    .descript {
+        font-size: 16px;
+        color:#404044;
+    } */
+    .notjob {
+        margin: 10% auto 5% auto;
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+    }
+    .form-group {
+        font-family: 'PobedaBold', sans-serif;
+        border-radius: 30px;
+        padding: 2%;
+        
+        background-color: #28292b;
+        margin: 5% 25%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 50%; 
+        box-shadow: 12px 12px black, 12px 12px black;
+    }
+    .form-group label {
+        letter-spacing: 1.5px;
+        color:whitesmoke;
+        font-size: 30px;
+        
+    }
+    .form-control{
+        border: 2px solid whitesmoke;
+        margin: 1% 0;
+    }
+    .form-control:invalid {
+        border: 5px solid red;
+    }
+    .form-group small {
+        text-align: center;
+        font-size: 23px;
+        color:whitesmoke;
+        letter-spacing: 2px;
+        margin-bottom: 1%;
+    }
+    .form-group input {
+        font-size: 20px;
+    }
+    .sendData {
+        border: 1px solid whitesmoke;
+        width: 30%;
+        padding: 1.5%;
+        font-size: 25px;
+        letter-spacing: 1.5px;
+        border-radius: 25px;
+        color:black;
+        background-color: whitesmoke;
+        border: 1px solid whitesmoke;
+    }
+    .jobs button:active{
+        background-color: #28292b;
+        color:whitesmoke;
+    }
+
+    .cases {
+        color: whitesmoke;
+        overflow: hidden;
+        background: rgb(43, 40, 40);
+    }
+    .cases .sub-title {
+        margin-bottom: 2%;
+    }
+    .cases-cards {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .cases-card {
+        padding: 1.5% 1.5%;
+        border: 1px solid black;
+        max-height: 10%;
+        border: 2px solid black;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2%;
+    }
+    .cases-card .text {
+        font-size: 25px;
+        width: 100%;
+        text-align: center;
+    }
+    .cases-cards a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    .cases-cards a:hover {
+        cursor: pointer;
+        color:whitesmoke;
+        background-color: black;
+        margin-bottom: 2%;
+        transition: .6s;
+    }
 
 
 
-.info {
-    background-color: rgb(43, 40, 40);
-}
-.info .container {
-    font-family: 'PobedaBold', sans-serif;
-    color: white;
-    max-width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.info .contact-items {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.list {
-    letter-spacing: 2px;
-    padding: 0;
-    list-style: none;
-    font-size: 25px;
+    .info {
+        background-color: rgb(43, 40, 40);
+    }
+    .info .container {
+        font-family: 'PobedaBold', sans-serif;
+        color: whitesmoke;
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .info .contact-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .list {
+        letter-spacing: 2px;
+        padding: 0;
+        list-style: none;
+        font-size: 25px;
 
-}
-.social-item a{
-    text-decoration: none;
-    color: white;
-}
-.social-item a:hover {
-    color: white;
-}
+    }
+    .social-item a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    .social-item a:hover {
+        color: whitesmoke;
+    }
 
 
 
 
 
-.footer {
-    background-color: rgb(43, 40, 40);
-    padding: 25px 0;
-}
-.footer .container {
-    display: flex;
-    justify-content: flex-end;
-}
-.rights {
-    font-family: 'PobedaBold', sans-serif;
-    font-size: 20px;
-    letter-spacing: 2px;
-    color: white;
-}
+    .footer {
+        background-color: rgb(43, 40, 40);
+        padding: 25px 0;
+    }
+    .footer .container {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .rights {
+        font-family: 'PobedaBold', sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: whitesmoke;
+    }
 
 
-.header, .main, .cases, .jobs, .info, .footer {
-    font-family: 'PobedaBold', sans-serif;
-}
+    .header, .main, .cases, .jobs, .info, .footer {
+        font-family: 'PobedaBold', sans-serif;
+    }
