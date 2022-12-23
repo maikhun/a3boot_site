@@ -76,7 +76,7 @@
     }
     .main {
         background-image: url("../images/cube.png");
-        background-position: -150% 80%;
+        background-position: -120% 80%;
         background-color: rgba(43, 40, 40, 0.1s);
         object-fit: contain;
         color: black;
@@ -221,7 +221,7 @@
 
     .jobs, .response, .experience, .info, .cases {
         overflow: hidden;
-        padding: 5% 0;
+        padding: 6% 0;
     }
     /* .cases {
         color:#030305;
@@ -374,11 +374,16 @@
     }
 
     .cases {
-        color: whitesmoke;
+        color: black;
         overflow: hidden;
-        background: rgb(43, 40, 40);
+        background-image: url("../images/cubes.png");
+        background-repeat:space;
+        background-position: 0 100%;
     }
     .cases .sub-title {
+        text-align: center;
+        font-size: 75px;
+        background-color: white;
         margin-bottom: 2%;
     }
     .cases-cards {
@@ -388,13 +393,13 @@
     }
     .cases-card {
         padding: 1.5% 1.5%;
-        border: 1px solid black;
         max-height: 10%;
         border: 2px solid black;
         display:flex;
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 2%;
+        background-color: white;
     }
     .cases-card .text {
         font-size: 25px;
@@ -403,15 +408,21 @@
     }
     .cases-cards a {
         text-decoration: none;
-        color: whitesmoke;
+        color: black;
     }
-    .cases-cards a:hover {
+    .cases-cards a:hover{
         cursor: pointer;
-        color:whitesmoke;
+        color: white;
         background-color: black;
         margin-bottom: 2%;
-        transition: .6s;
+        transition: .3s;
     }
+    .cases-cards .cases-card:hover {
+        cursor:pointer;
+        color:white;
+        background-color: black;
+        transition: .3s;
+    } 
 
 
 
