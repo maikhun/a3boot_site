@@ -18,6 +18,7 @@
     .header {
         position: fixed;
         width: 100%;
+        height: fixed;
         background-color: black;
         padding: 0.5% 0 0.2% 0;
         z-index: 100;
@@ -36,8 +37,12 @@
         justify-content: space-between;
     }
     .logo img {
-        vertical-align: middle;
+        width: 150px;
         margin-right: 10%;
+    }
+    .logo img:hover {
+        width: 200px;
+        transition: 0.5s;
     }
     .menu ul {
         list-style: none;
@@ -48,6 +53,7 @@
         margin-right: 10%;
     }
     .menu-item a {
+        padding: 5%;
         font-family: 'PobedaBold', sans-serif;
         text-align: center;
         font-size: 170%;
@@ -55,9 +61,13 @@
         text-decoration: none;
     }
     .menu-item a:hover {
-        border-bottom: 3px solid black;
-        color:white;
+        /* border-bottom: 3px solid black; */
+        color:black;
+        background-color: white;
+        font-size: 190%;
+        transition: .3s;
     }
+
 
 
 
@@ -65,7 +75,9 @@
         height: 100vh;
     }
     .main {
-        background-image: url("../images/background.jpg");
+        background-image: url("../images/cube.png");
+        background-position: -150% 80%;
+        background-color: rgba(43, 40, 40, 0.1s);
         object-fit: contain;
         color: black;
         overflow: hidden;
@@ -83,7 +95,7 @@
         font-size: 75px;
         margin: 0 auto;
         color:whitesmoke;
-        background-color: rgba(43, 40, 40, 0.4);
+        background-color: rgba(167, 36, 167, 0.6);
     }
     .main-text {
         font-family: 'PobedaBold', sans-serif;
@@ -139,7 +151,14 @@
         width: 100%;
     } 
     .carousel-control-prev, .carousel-control-next {
-        background-color: rgba(43, 40, 40, 0.2);
+        background-color: rgba(43, 40, 40, 0.05);
+        border-radius: 360px;
+        margin: 15%;
+        width: 20%;
+        height: 20%;
+    }
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+        background-color: rgba(43, 40, 40, 0.01);
         border-radius: 360px;
         margin: 15%;
         width: 20%;
@@ -148,44 +167,56 @@
 
 
     .experience {
-        background: rgb(43, 40, 40);
+        background-color: white;
         font-size: 35px;
         overflow: hidden;
-        padding: 0% 0% 0% 25%;
+    }
+    .experience h1 {
+        text-align: center;
+        font-family: 'PobedaBold', sans-serif;
+        font-size: 75px;
+        color:whitesmoke;
+        background-color: rgba(0, 0, 0, 1);
     }
     .experience a {
         cursor: pointer;
         text-decoration: none;
     }
-    .experience .container .cards {
+        
+    .cards {
+        vertical-align: top;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
     .cards a {
-        width: 100%;
-        align-items: center;
+        width: 25%;
         display: flex;
-        margin-left: 3.5%;
+        justify-content: center;
+        flex-direction: column;
     }
-    .cards .card {
-        font-family: 'PobedaBold', sans-serif;
-        background-color: #8a8a8a;
-        padding: 1%;
-        width: 65%;
-        height: 95%;
-        margin-right: 15%;
-    
-        border-radius: 3px;
-        color:black;
-        align-items: center;
+    .cards a:hover {
+        width: 25%;
+        border: 3px solid black;
+        border-radius: 10px;
+        transition: .2s;
     }
-    .card .card-text {
-        text-align: center;
-        padding: 3%;
-    }
-    .card img {
+    .exp-card {
         padding: 5%;
-        width: 50%;
-        height: 45%;
+        max-height: 100%;
+        background-color: white;
+        border-radius: 10px; 
+    }
+    .exp-card img {
+        margin-bottom: 5%;
+        border: 3px solid black;
+        border-radius: 360px;
+        padding: 10%;
+        max-width: 100%;
+    }
+    .exp-card h1 {
+        text-align: center;
+        font-size: 30px;
     }
 
     .jobs, .response, .experience, .info, .cases {
