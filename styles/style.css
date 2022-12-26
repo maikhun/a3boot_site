@@ -2,6 +2,9 @@
         margin: 0;
         padding: 0;
     }
+    body {
+        scroll-behavior: smooth;
+    }
     @font-face {
         font-family: 'PobedaBold';
         src: url("../fonts/pobeda_bold.ttf");
@@ -14,7 +17,10 @@
         font-weight: normal;
         font-style: normal;
     }
-
+    @keyframes ani {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
     .header {
         position: fixed;
         width: 100%;
@@ -50,17 +56,17 @@
         justify-content: center;
     }
     .menu-item {
-        margin-right: 10%;
+        margin-right: 5%;
+        padding: 1.5%;
     }
     .menu-item a {
-        padding: 5%;
         font-family: 'PobedaBold', sans-serif;
         text-align: center;
         font-size: 170%;
         color: whitesmoke;
         text-decoration: none;
     }
-    .menu-item a:hover {
+    .menu-item a:hover  {
         /* border-bottom: 3px solid black; */
         color:black;
         background-color: white;
@@ -76,7 +82,7 @@
     }
     .main {
         background-image: url("../images/cube.png");
-        background-position: -120% 80%;
+        background-position: -55% 80%;
         background-color: rgba(43, 40, 40, 0.1s);
         object-fit: contain;
         color: black;
@@ -95,7 +101,7 @@
         font-size: 75px;
         margin: 0 auto;
         color:whitesmoke;
-        background-color: rgba(167, 36, 167, 0.6);
+        background: linear-gradient(0deg, rgba(213,102,224,.6) 0%, rgba(134,30,181,.7) 100%);
     }
     .main-text {
         font-family: 'PobedaBold', sans-serif;
@@ -167,16 +173,16 @@
 
 
     .experience {
-        background-color: white;
-        font-size: 35px;
         overflow: hidden;
+    }
+    .big-title, .title-cards {
+        font-family: 'PobedaBold', sans-serif;
+        font-size: 75px;
+        color:white;
+        background-color: rgba(0, 0, 0, 1);
     }
     .experience h1 {
         text-align: center;
-        font-family: 'PobedaBold', sans-serif;
-        font-size: 75px;
-        color:whitesmoke;
-        background-color: rgba(0, 0, 0, 1);
     }
     .experience a {
         cursor: pointer;
@@ -184,44 +190,51 @@
     }
         
     .cards {
+        padding-top: 6%;
         vertical-align: top;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
     .cards a {
-        width: 25%;
+        width: 20%;
         display: flex;
         justify-content: center;
         flex-direction: column;
+  
     }
     .cards a:hover {
-        width: 25%;
-        border: 3px solid black;
-        border-radius: 10px;
-        transition: .2s;
+        border-radius: 5px;
+        transition: .3s;
+    }
+    .cards a:hover .exp-card {
+        background: linear-gradient(0deg, rgba(213,102,224,.6) 0%, rgba(134,30,181,.9) 100%);
+    }
+    .cards a:hover .exp-card .title-cards {
+        visibility: visible;
+        animation: ani 1s;
     }
     .exp-card {
         padding: 5%;
-        max-height: 100%;
-        background-color: white;
+        height: 100%;
         border-radius: 10px; 
     }
     .exp-card img {
-        margin-bottom: 5%;
-        border: 3px solid black;
+        background: black;
         border-radius: 360px;
+        margin-bottom: 5%;
         padding: 10%;
         max-width: 100%;
     }
-    .exp-card h1 {
+    .exp-card .title-cards {
+        visibility: hidden;
         text-align: center;
         font-size: 30px;
     }
 
     .jobs, .response, .experience, .info, .cases {
         overflow: hidden;
-        padding: 6% 0;
+        padding-top: 4.5%;
     }
     /* .cases {
         color:#030305;
@@ -273,11 +286,16 @@
 
     .jobs .sub-title, .cases .sub-title {
         font-family: 'PobedaBold', sans-serif;
-        font-size: 40px;
+        font-size: 75px;
     }
     .jobs {
-        background-color: rgba(43, 40, 40, 0.4);
+        background-image: url("../images/cubeee.png");
+        background-repeat: no-repeat;
+        background-position: 100%;
         color: black;
+    }
+    .jobs .big-title {
+        padding: 0 75%;
     }
     /* .jobs-list {
         width: 60%;
@@ -325,23 +343,22 @@
         font-family: 'PobedaBold', sans-serif;
         border-radius: 30px;
         padding: 2%;
-        
-        background-color: #28292b;
+        background: black;
         margin: 5% 25%;
         display: flex;
         align-items: center;
         flex-direction: column;
         width: 50%; 
-        box-shadow: 12px 12px black, 12px 12px black;
+        box-shadow: 12px 12px rgba(213,102,224,.8), 12px 12px rgba(134,30,181,.9);
     }
     .form-group label {
         letter-spacing: 1.5px;
-        color:whitesmoke;
-        font-size: 30px;
+        color:white;
+        font-size: 35px;
         
     }
     .form-control{
-        border: 2px solid whitesmoke;
+        border: 2px solid white;
         margin: 1% 0;
     }
     .form-control:invalid {
@@ -350,7 +367,7 @@
     .form-group small {
         text-align: center;
         font-size: 23px;
-        color:whitesmoke;
+        color:white;
         letter-spacing: 2px;
         margin-bottom: 1%;
     }
@@ -358,71 +375,71 @@
         font-size: 20px;
     }
     .sendData {
-        border: 1px solid whitesmoke;
+        border: 1px solid black;
         width: 30%;
         padding: 1.5%;
         font-size: 25px;
         letter-spacing: 1.5px;
         border-radius: 25px;
         color:black;
-        background-color: whitesmoke;
-        border: 1px solid whitesmoke;
+        background-color: white;
+    }
+    
+    .sendData:hover {
+        background-color: black;
+        color: white;
+        transition: .3s;
     }
     .jobs button:active{
         background-color: #28292b;
-        color:whitesmoke;
+        color:white;
     }
 
     .cases {
         color: black;
         overflow: hidden;
         background-image: url("../images/cubes.png");
-        background-repeat:space;
-        background-position: 0 100%;
+        background-repeat: repeat-y;
+        background-position: 100% 0;
     }
-    .cases .sub-title {
-        text-align: center;
-        font-size: 75px;
-        background-color: white;
-        margin-bottom: 2%;
+    .cases .big-title {
+        padding: 0 15%;
     }
     .cases-cards {
         display: flex;
         flex-direction: column;
-
     }
     .cases-card {
+        height: 15%;
+        width: 75%;
         padding: 1.5% 1.5%;
-        max-height: 10%;
-        border: 2px solid black;
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 2%;
-        background-color: white;
+        max-height: 10%;    
     }
     .cases-card .text {
         font-size: 25px;
         width: 100%;
-        text-align: center;
     }
-    .cases-cards a {
+        
+    .cases-cards .anotherPage {
         text-decoration: none;
         color: black;
+        margin-bottom: 2%;
     }
-    .cases-cards a:hover{
+    .cases-cards .anotherPage:hover{
         cursor: pointer;
         color: white;
-        background-color: black;
-        margin-bottom: 2%;
+        margin-top: 1%;
+        margin-bottom: 3%;
         transition: .3s;
     }
-    .cases-cards .cases-card:hover {
+    .cases-cards .anotherPage:hover .cases-card{
         cursor:pointer;
         color:white;
-        background-color: black;
-        transition: .3s;
-    } 
+        background: linear-gradient(0deg, rgba(213,102,224,.9) 0%, rgba(134,30,181,.9) 100%);
+        transition: .6s;
+    }
+    
+
 
 
 
@@ -457,8 +474,62 @@
         color: whitesmoke;
     }
 
-
-
+    .modalDialog {
+        position: fixed;
+        font-family: "PobedaBold", sans-serif;
+        font-size: 32px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        display: none;
+        pointer-events: none;
+    }
+    
+    .modalDialog:target {
+        display: block;
+        pointer-events: auto;
+    }
+    
+    .modalDialog > div {
+        width: 800px;
+        position: relative;
+        margin: 20% auto;
+        padding: 5px 20px 13px 20px;
+        border-radius: 5px;
+        background: wheat;
+    }
+    
+    .close {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        background: linear-gradient(0deg, rgb(213,102,224) 0%, rgb(134,30,181) 100%);
+        color: white;
+        line-height: 25px;
+        position: absolute;
+        right: -12px;
+        text-align: center;
+        top: -10px;
+        width: 40px;
+        text-decoration: none;
+        font-weight: bold;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+        -moz-box-shadow: 1px 1px 3px #000;
+        -webkit-box-shadow: 1px 1px 3px #000;
+        box-shadow: 1px 1px 3px #000;
+    }
+    .close:hover{
+        background-color:black;
+        color: red;
+    }
+    
 
 
     .footer {
